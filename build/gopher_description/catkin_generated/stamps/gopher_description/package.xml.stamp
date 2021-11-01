@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gopher_description</name>
+  <version>0.8.3</version>
+  <description>
+    URDF for Gopher Robot.
+  </description>
+
+  <maintainer email="rmankaryous@wpi.edu">Robear Mankaryous</maintainer>
+
+  <license>CreativeCommons-Attribution-NonCommercial-ShareAlike-4.0-International</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+</package>

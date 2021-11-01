@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/devel
+
+Name: gopher_control
+Description: Description of gopher_control
+Version: 0.0.0
+Cflags: -I/ros/catkin_ws/src/Gopher-Nurse-Robot/gopher_control/include
+Libs: -L${prefix}/lib -lteleop_twist_joy
+Requires: geometry_msgs sensor_msgs roscpp rospy std_msgs

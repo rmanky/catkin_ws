@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/devel
+
+Name: unity_slam_controller
+Description: Description of unity_slam_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

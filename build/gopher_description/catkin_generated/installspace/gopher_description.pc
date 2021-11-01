@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/install
+
+Name: gopher_description
+Description: Description of gopher_description
+Version: 0.8.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/devel
+
+Name: gopher_navigation
+Description: Description of gopher_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
