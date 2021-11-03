@@ -1,0 +1,10 @@
+(cl:defpackage unity_gopher-srv
+  (:use )
+  (:export
+   "POSITIONSERVICE"
+   "<POSITIONSERVICE-REQUEST>"
+   "POSITIONSERVICE-REQUEST"
+   "<POSITIONSERVICE-RESPONSE>"
+   "POSITIONSERVICE-RESPONSE"
+  ))
+
