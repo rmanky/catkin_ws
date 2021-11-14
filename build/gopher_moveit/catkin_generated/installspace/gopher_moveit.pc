@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/install
+
+Name: gopher_moveit
+Description: Description of gopher_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

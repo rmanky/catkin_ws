@@ -7,6 +7,6 @@
 [submodule "src/hector_slam"]
 	path = src/hector_slam
 	url = https://github.com/tu-darmstadt-ros-pkg/hector_slam
-[submodule "src/ros_kortex"]
-	path = src/ros_kortex
-	url = https://github.com/Kinovarobotics/ros_kortex
+[submodule "universal_robot"]
+	path = universal_robot
+	url = https://github.com/ros-industrial/universal_robot
