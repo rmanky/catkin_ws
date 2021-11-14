@@ -323,6 +323,9 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
+
 //Path to a file.
 FreeImage_INCLUDE_DIRS:PATH=/usr/include
 
@@ -608,6 +611,9 @@ OGRE_Volume_LIBRARY_FWK:STRING=NOTFOUND
 //x
 OGRE_Volume_LIBRARY_REL:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreVolume.so
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -650,6 +656,18 @@ Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 //Path to a library.
 Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
@@ -660,7 +678,7 @@ SDFormat_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/sdformat
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=8a58cd573d7a
+SITE:STRING=887586ff0792
 
 //Path to a library.
 SWSCALE_LIBRARY_swscale:FILEPATH=/usr/lib/x86_64-linux-gnu/libswscale.so
@@ -741,17 +759,14 @@ controller_manager_msgs_DIR:PATH=/opt/ros/melodic/share/controller_manager_msgs/
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
 //The directory containing a CMake configuration file for eigen_stl_containers.
 eigen_stl_containers_DIR:PATH=/opt/ros/melodic/share/eigen_stl_containers/cmake
-
-//Value Computed by CMake
-fetch_description_BINARY_DIR:STATIC=/ros/catkin_ws/build/gopher_description
-
-//Value Computed by CMake
-fetch_description_SOURCE_DIR:STATIC=/ros/catkin_ws/src/gopher_description
 
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
@@ -834,6 +849,9 @@ geometric_shapes_DIR:PATH=/opt/ros/melodic/share/geometric_shapes/cmake
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 
+//Dependencies for the target
+geotiff_writer_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;Qt5::Widgets;
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/ros/catkin_ws/build/gtest/googlemock
 
@@ -877,12 +895,6 @@ gopher_navigation_BINARY_DIR:STATIC=/ros/catkin_ws/build/Gopher-Nurse-Robot/goph
 gopher_navigation_SOURCE_DIR:STATIC=/ros/catkin_ws/src/Gopher-Nurse-Robot/gopher_navigation
 
 //Value Computed by CMake
-gopher_unity_endpoint_BINARY_DIR:STATIC=/ros/catkin_ws/build/Gopher-ROS-Unity/gopher_unity_endpoint
-
-//Value Computed by CMake
-gopher_unity_endpoint_SOURCE_DIR:STATIC=/ros/catkin_ws/src/Gopher-ROS-Unity/gopher_unity_endpoint
-
-//Value Computed by CMake
 gopher_unity_proto_BINARY_DIR:STATIC=/ros/catkin_ws/build/gopher_unity_proto
 
 //Value Computed by CMake
@@ -916,6 +928,105 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+hector_compressed_map_transport_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_compressed_map_transport
+
+//Value Computed by CMake
+hector_compressed_map_transport_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_compressed_map_transport
+
+//Value Computed by CMake
+hector_geotiff_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_geotiff
+
+//The directory containing a CMake configuration file for hector_geotiff.
+hector_geotiff_DIR:PATH=/ros/catkin_ws/devel/share/hector_geotiff/cmake
+
+//Value Computed by CMake
+hector_geotiff_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_geotiff
+
+//Value Computed by CMake
+hector_geotiff_launch_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_geotiff_launch
+
+//Value Computed by CMake
+hector_geotiff_launch_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_geotiff_launch
+
+//Value Computed by CMake
+hector_geotiff_plugins_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_geotiff_plugins
+
+//Dependencies for the target
+hector_geotiff_plugins_LIB_DEPENDS:STATIC=general;geotiff_writer;general;/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Value Computed by CMake
+hector_geotiff_plugins_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_geotiff_plugins
+
+//Value Computed by CMake
+hector_imu_attitude_to_tf_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf
+
+//Value Computed by CMake
+hector_imu_attitude_to_tf_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_imu_attitude_to_tf
+
+//Value Computed by CMake
+hector_imu_tools_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_imu_tools
+
+//Value Computed by CMake
+hector_imu_tools_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_imu_tools
+
+//Value Computed by CMake
+hector_map_server_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_map_server
+
+//Value Computed by CMake
+hector_map_server_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_map_server
+
+//Value Computed by CMake
+hector_map_tools_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_map_tools
+
+//The directory containing a CMake configuration file for hector_map_tools.
+hector_map_tools_DIR:PATH=/ros/catkin_ws/devel/share/hector_map_tools/cmake
+
+//Value Computed by CMake
+hector_map_tools_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_map_tools
+
+//Value Computed by CMake
+hector_mapping_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_mapping
+
+//Value Computed by CMake
+hector_mapping_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_mapping
+
+//Value Computed by CMake
+hector_marker_drawing_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_marker_drawing
+
+//The directory containing a CMake configuration file for hector_marker_drawing.
+hector_marker_drawing_DIR:PATH=/ros/catkin_ws/devel/share/hector_marker_drawing/cmake
+
+//Value Computed by CMake
+hector_marker_drawing_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_marker_drawing
+
+//Value Computed by CMake
+hector_nav_msgs_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_nav_msgs
+
+//The directory containing a CMake configuration file for hector_nav_msgs.
+hector_nav_msgs_DIR:PATH=/ros/catkin_ws/devel/share/hector_nav_msgs/cmake
+
+//Value Computed by CMake
+hector_nav_msgs_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_nav_msgs
+
+//Value Computed by CMake
+hector_slam_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_slam
+
+//Value Computed by CMake
+hector_slam_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_slam
+
+//Value Computed by CMake
+hector_slam_launch_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_slam_launch
+
+//Value Computed by CMake
+hector_slam_launch_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_slam_launch
+
+//Value Computed by CMake
+hector_trajectory_server_BINARY_DIR:STATIC=/ros/catkin_ws/build/hector_slam/hector_trajectory_server
+
+//Value Computed by CMake
+hector_trajectory_server_SOURCE_DIR:STATIC=/ros/catkin_ws/src/hector_slam/hector_trajectory_server
+
 //The directory containing a CMake configuration file for ignition-cmake0.
 ignition-cmake0_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-cmake0
 
@@ -934,6 +1045,9 @@ ignition-msgs1_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-msgs1
 //The directory containing a CMake configuration file for ignition-transport4.
 ignition-transport4_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-transport4
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
+
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
 
@@ -950,10 +1064,10 @@ kortex_control_BINARY_DIR:STATIC=/ros/catkin_ws/build/ros_kortex/kortex_control
 kortex_control_SOURCE_DIR:STATIC=/ros/catkin_ws/src/ros_kortex/kortex_control
 
 //Value Computed by CMake
-kortex_description_BINARY_DIR:STATIC=/ros/catkin_ws/build/kortex_description
+kortex_description_BINARY_DIR:STATIC=/ros/catkin_ws/build/ros_kortex/kortex_description
 
 //Value Computed by CMake
-kortex_description_SOURCE_DIR:STATIC=/ros/catkin_ws/src/kortex_description
+kortex_description_SOURCE_DIR:STATIC=/ros/catkin_ws/src/ros_kortex/kortex_description
 
 //Value Computed by CMake
 kortex_driver_BINARY_DIR:STATIC=/ros/catkin_ws/build/ros_kortex/kortex_driver
@@ -985,8 +1099,11 @@ kortex_move_it_config_BINARY_DIR:STATIC=/ros/catkin_ws/build/ros_kortex/kortex_m
 //Value Computed by CMake
 kortex_move_it_config_SOURCE_DIR:STATIC=/ros/catkin_ws/src/ros_kortex/kortex_move_it_config/kortex_move_it_config
 
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/melodic/lib/libactionlib.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -1016,10 +1133,13 @@ moveit_ros_occupancy_map_monitor_DIR:PATH=/opt/ros/melodic/share/moveit_ros_occu
 moveit_ros_planning_DIR:PATH=/opt/ros/melodic/share/moveit_ros_planning/cmake
 
 //The directory containing a CMake configuration file for moveit_ros_planning_interface.
-moveit_ros_planning_interface_DIR:PATH=moveit_ros_planning_interface_DIR-NOTFOUND
+moveit_ros_planning_interface_DIR:PATH=/opt/ros/melodic/share/moveit_ros_planning_interface/cmake
 
 //The directory containing a CMake configuration file for moveit_ros_warehouse.
 moveit_ros_warehouse_DIR:PATH=/opt/ros/melodic/share/moveit_ros_warehouse/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for object_recognition_msgs.
 object_recognition_msgs_DIR:PATH=/opt/ros/melodic/share/object_recognition_msgs/cmake
@@ -1140,18 +1260,6 @@ unity_gopher_BINARY_DIR:STATIC=/ros/catkin_ws/build/unity_gopher
 
 //Value Computed by CMake
 unity_gopher_SOURCE_DIR:STATIC=/ros/catkin_ws/src/unity_gopher
-
-//Value Computed by CMake
-unity_slam_BINARY_DIR:STATIC=/ros/catkin_ws/build/unity_slam
-
-//Value Computed by CMake
-unity_slam_SOURCE_DIR:STATIC=/ros/catkin_ws/src/unity_slam
-
-//Value Computed by CMake
-unity_slam_controller_BINARY_DIR:STATIC=/ros/catkin_ws/build/unity_slam_controller
-
-//Value Computed by CMake
-unity_slam_controller_SOURCE_DIR:STATIC=/ros/catkin_ws/src/unity_slam_controller
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/melodic/share/urdf/cmake
@@ -1489,7 +1597,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=37
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1554,6 +1662,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_DL:INTERNAL=[true][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_GTS:INTERNAL=[true][v()]
 //Details about finding JSONCPP
 FIND_PACKAGE_MESSAGE_DETAILS_JSONCPP:INTERNAL=[true][v()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Protobuf

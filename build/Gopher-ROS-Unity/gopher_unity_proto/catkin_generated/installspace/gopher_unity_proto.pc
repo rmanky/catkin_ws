@@ -1,8 +1,0 @@
-prefix=/ros/catkin_ws/install
-
-Name: gopher_unity_proto
-Description: Description of gopher_unity_proto
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

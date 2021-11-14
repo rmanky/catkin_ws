@@ -4,3 +4,9 @@
 [submodule "src/ROS-TCP-Endpoint"]
 	path = src/ROS-TCP-Endpoint
 	url = https://github.com/Unity-Technologies/ROS-TCP-Endpoint
+[submodule "src/hector_slam"]
+	path = src/hector_slam
+	url = https://github.com/tu-darmstadt-ros-pkg/hector_slam
+[submodule "src/ros_kortex"]
+	path = src/ros_kortex
+	url = https://github.com/Kinovarobotics/ros_kortex

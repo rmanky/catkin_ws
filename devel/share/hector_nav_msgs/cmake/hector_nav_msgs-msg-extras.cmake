@@ -1,0 +1,2 @@
+set(hector_nav_msgs_MESSAGE_FILES "")
+set(hector_nav_msgs_SERVICE_FILES "/ros/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv;/ros/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv;/ros/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv;/ros/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv;/ros/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv")
