@@ -1,0 +1,8 @@
+prefix=/ros/catkin_ws/install
+
+Name: gopher_unity
+Description: Description of gopher_unity
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
